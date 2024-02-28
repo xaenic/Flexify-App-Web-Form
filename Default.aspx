@@ -30,7 +30,7 @@
                 <h1 class="text-4xl font-bold">Craft Your Digital Identity</h1>
                 <p>Craft your unique profile page that truly reflects you.</p>
                <div>
-                    <a href="" class="bg-[#39B200] p-2 rounded-lg">Get Started</a>
+                    <a href="/Login" class="bg-[#39B200] p-2 rounded-lg">Get Started</a>
                </div>
             </div>
         </div>
@@ -75,11 +75,20 @@
 
         </div>
     </section>
-
-    <footer class="bg-gray-740 text-[#F5F5F5] text-center py-10">
-        <p class="text-xl">&copy; 2024 G.L. All rights reserved.</p>
-    </footer>
     
+    <section class="h-screen flex justify-center items-center">
+        <div class="bg-gray-740 text-[#F5F5F5] py-20 h-screen">
+            <div>
+                <h2 class="font font-bold text-5xl py-20 text-center">Jumpstart your corner of the internet today</h2>
+            </div>
+            <div class="mb-6 flex justify-center">
+                <input type="text" placeholder="flex.ify/yourname" 
+                class="block w-1/2 p-4 text-xl text-gray-900 border border-white-300 rounded-2xl bg-white-50 text-center">
+                <button type="submit" class="ml-4 px-6 py-3 bg-[#D2E823] text-black rounded-2xl">Submit</button>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 
