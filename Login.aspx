@@ -46,7 +46,7 @@
                 </div>
                 <div class="flex flex-col items-center">
                     <span>Or</span>
-                    <a class="text-blue-600" href="/Auth/Register">Don't Have an Account ? </a>
+                    <a class="text-blue-600" href="/Register">Don't Have an Account ? </a>
                 </div>
             </div>
         </div>
