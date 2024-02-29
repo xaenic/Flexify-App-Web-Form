@@ -19,7 +19,7 @@
                 <li><a href="/home">Home</a></li>
                 <li><a href="/home">Contact</a></li>
                 <li><a href="/home">About</a></li>
-                <li><a href="/Login">Login</a></li>
+                <li><a href="/login">Login</a></li>
             </ul>
         </nav>
     <section id="mainSection" class=" bg-fixed bg-gray-950 h-screen p-10 relative overflow-hidden">
