@@ -23,7 +23,7 @@ namespace Flexify_App
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["connecting"].ConnectionString;
+            string connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

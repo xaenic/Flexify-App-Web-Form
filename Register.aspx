@@ -47,14 +47,14 @@
                         </div>
 
                         <div>
-                            <asp:Button ID="btnRegister" runat="server" Text="Create an account" CssClass="w-full h-20 cursor-pointer bg-gradient-to-r from-[#DB4C40] to-[#3C153B] rounded-lg text-white font-bold" ValidationGroup="RegisterValidation" OnClick="btnRegister_Click" />
+                            <asp:Button ID="btnRegister" runat="server" Text="Create an account" CssClass="w-full p-5 cursor-pointer bg-gradient-to-r from-[#DB4C40] to-[#3C153B] rounded-lg text-white font-bold" ValidationGroup="RegisterValidation" OnClick="btnRegister_Click" />
                             <asp:Label ID="lblError" runat="server" CssClass="text-red-600" Visible="false"></asp:Label>
                         </div>
                     </div>
 
                     <div class="flex flex-col items-center">
                         <span>Or</span>
-                        <a class="text-blue-600" href="/Login">You Have an Account Already ? </a>
+                        <a class="text-blue-600" href="/Login">Already have an account? </a>
                     </div>
                 </div>
             </div>

@@ -38,11 +38,12 @@ namespace Flexify_App
             }
             if (IsEmailExists(email))
             {
-                lblError.Text = "Email already exists.";
+
+                lblError.Text = "Email already exists";
                 lblError.Visible = true;
                 return;
             }
-            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["connecting"].ConnectionString;
+            string connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
             string query = "INSERT INTO [user] (firstName, lastName, email, [password]) VALUES (@firstName, @lastName, @email, @password)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -82,15 +83,13 @@ namespace Flexify_App
         }
         private bool IsEmailExists(string email)
         {
-            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["connecting"].ConnectionString;
+            string connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
             string query = "SELECT COUNT(*) FROM [user] WHERE email = @Email";
-
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Email", email);
-
                     connection.Open();
                     int count = (int)command.ExecuteScalar();
                     return count > 0;
