@@ -19,7 +19,7 @@
                 <li><a href="/home">Home</a></li>
                 <li><a href="/home">Contact</a></li>
                 <li><a href="/home">About</a></li>
-                <li><a href="/Login">Login</a></li>
+                <li><a href="/login">Login</a></li>
             </ul>
         </nav>
     <section id="mainSection" class=" bg-fixed bg-gray-950 h-screen p-10 relative overflow-hidden">
@@ -30,7 +30,7 @@
                 <h1 class="text-4xl font-bold">Craft Your Digital Identity</h1>
                 <p>Craft your unique profile page that truly reflects you.</p>
                <div>
-                    <a href="/Login" class="bg-[#39B200] p-2 rounded-lg">Get Started</a>
+                    <a href="" class="bg-[#39B200] p-2 rounded-lg">Get Started</a>
                </div>
             </div>
         </div>
