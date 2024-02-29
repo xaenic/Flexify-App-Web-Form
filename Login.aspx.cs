@@ -27,31 +27,28 @@ namespace Flexify_App
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT COUNT(*) FROM [user] WHERE email = @email AND password = @password";
+                string query = "SELECT * FROM [user] WHERE email = @email AND password = @password";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@email", email);
                     command.Parameters.AddWithValue("@password", password);
-
                     connection.Open();
-                    int count = (int)command.ExecuteScalar();
 
-                    if (count > 0)
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        string firstNameQuery = "SELECT firstname FROM [user] WHERE email = @Email";
-                        using (SqlCommand firstNameCommand = new SqlCommand(firstNameQuery, connection))
+                        if (reader.Read())
                         {
-                            firstNameCommand.Parameters.AddWithValue("@Email", email);
-                            string firstname = (string)firstNameCommand.ExecuteScalar();
+                            string firstName = reader.GetString(reader.GetOrdinal("firstName"));
                             Session["LoggedIn"] = true;
-                            Session["firstName"] = firstname;
+                            Session["firstName"] = firstName;
+                            Session["email"] = email;
                             Response.Redirect("~/Home.aspx");
                         }
-                    }
-                    else
-                    {
-                        lblErrorMessage.Text = "Invalid email address or password. Please try again.";
-                        lblErrorMessage.Visible = true;
+                        else
+                        {
+                            lblError.Text = "Invalid email address or password. Please try again.";
+                            lblError.Visible = true;
+                        }
                     }
                 }
             }

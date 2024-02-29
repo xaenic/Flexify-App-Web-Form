@@ -16,11 +16,14 @@
               </div>
 
                 <div class="md:mt-10 w-full flex flex-col gap-4 p-2">
+                        <asp:Label ID="lblError" runat="server" CssClass="text-red-600" Visible="false"></asp:Label>
                     <div>
                        
                         <div class="bg-zinc-300 p-4 rounded-lg text-black flex gap-3">
                             <img src="Images/user.svg"/>
-                            <input type="email" required placeholder="Email or Username" class="w-full bg-transparent  outline-none border-none"/>
+                          
+
+                             <asp:TextBox TextMode="Email" ID="txtEmail" runat="server" CssClass="w-full bg-transparent  outline-none border-none" placeholder="Email"></asp:TextBox>
                         </div>
 
                     </div>
@@ -28,7 +31,7 @@
                        
                         <div class="bg-zinc-300 p-4 rounded-lg text-black  flex gap-3">
                             <img src="Images/lock.svg" />
-                            <input type="password" required placeholder="Password" class="w-full bg-transparent  outline-none border-none" />
+                             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="w-full bg-transparent  outline-none border-none" placeholder="Password"></asp:TextBox>
                         </div>
 
                     </div>
@@ -39,9 +42,12 @@
                     <div>
 
                         <div class="bg-gradient-to-r from-[#DB4C40] to-[#090C02] p-4 rounded-lg text-white font-bold">
-                            <input type="submit" value="Login"class="cursor-pointer w-full bg-transparent  outline-none border-none" />
+               
+                                <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="cursor-pointer w-full bg-transparent  outline-none border-none" ValidationGroup="LoginValidation" OnClick="btnLogin_Click" />
+ 
                         </div>
-
+                       
+                      
                     </div>
                 </div>
                 <div class="flex flex-col items-center">
