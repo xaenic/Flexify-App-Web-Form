@@ -5,7 +5,7 @@
         <div class="flex grid grid-cols-1 md:grid-cols-12 h-full">
             <div class="col-span-8 h-full grid grid-cols-1 md:grid-cols-4 relative overflow-hidden">
                 <div class="p-10 pb-0">
-                    <a href="/" class="text-xl font-bold ">Flexify</a>
+                    <a href="/" class="text-xl font-bold ">Flesxify</a>
                 </div>
                 <div class="w-full h-full absolute -z-10 grid grid-cols-12" id="grid-container"></div>
                 <div class="md:pt-10 flex-col flex items-center col-span-2 md:mt-20 ">
@@ -13,7 +13,6 @@
                         <h1 class="text-4xl font-bold text-center">Join Flexify</h1>
                         <p class="text-center text-slate-600">Sign up for free</p>
                     </div>
-                    <asp:ValidationSummary ID="valSummary" runat="server" ValidationGroup="RegisterValidation" CssClass="text-red-600" />
 
                     <div class="md:mt-10 w-full flex flex-col gap-7 p-2">
                         <div class="grid grid-cols-2 gap-4">
