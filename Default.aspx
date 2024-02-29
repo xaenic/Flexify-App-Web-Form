@@ -107,7 +107,7 @@
             const yOffset = (e.pageY - containerOffset.top) / containerHeight - 0.5;
             const tiltAmount = 20; // adjust this value for desired tilt intensity
 
-            const tiltX = ((yOffset * tiltAmount).toFixed(2)) * -1 +10;
+            const tiltX = ((yOffset * tiltAmount).toFixed(2)) * -1 + 10;
             const tiltY = ((-xOffset * tiltAmount).toFixed(2)) * -1 + 10;
 
             container.css('transform', `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`);
@@ -118,7 +118,7 @@
         });
 
         // Reset the tilt effect when the mouse leaves the image
-    
+
     });
 </script>
 
