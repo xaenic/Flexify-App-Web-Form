@@ -15,7 +15,7 @@ namespace Flexify_App
             if (!IsPostBack && Session["LoggedIn"] != null && (bool)Session["LoggedIn"])
             {
 
-                Response.Redirect("~/Home.aspx");
+                Response.Redirect("~/App/Dashboard.aspx");
             }
         }
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace Flexify_App
                             Session["LoggedIn"] = true;
                             Session["firstName"] = firstName;
                             Session["email"] = email;
-                            Response.Redirect("~/Home.aspx");
+                            Response.Redirect("~/App/Dashboard.aspx");
                         }
                         else
                         {
